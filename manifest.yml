@@ -1,0 +1,15 @@
+---
+declared-services:
+  my-conversation-service:
+    label: conversation
+    plan: free
+applications:
+- name: conversa-bot-2901
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - conversa-2214
+  env:
+    NPM_CONFIG_PRODUCTION: false
